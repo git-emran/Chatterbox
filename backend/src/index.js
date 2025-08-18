@@ -1,7 +1,12 @@
 import express from "express";
 
-const app = express();
+import authRoutes from "./routes/auth.route.js";
 
-app.listen(5001, () => {
-  console.log("server is running");
+const app = express();
+const PORT = 5001;
+
+app.use("/api/auth", authRoutes);
+
+app.listen(PORT, () => {
+  console.log(`server is running ${PORT}`);
 });
