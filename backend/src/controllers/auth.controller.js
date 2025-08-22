@@ -41,7 +41,9 @@ export const signup = async (req, res) => {
 };
 
 export const login = (req, res) => {
-  res.send("login routes");
+  const { email, password } = req.body;
+  try {
+  } catch (error) {}
 };
 
 export const logout = (req, res) => {
